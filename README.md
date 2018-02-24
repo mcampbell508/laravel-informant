@@ -1,14 +1,22 @@
-Package Skeleton
+Laravel Informant
 ================
 
-[![Build Status](http://img.shields.io/travis/mcampbell508/package-skeleton.svg)](https://travis-ci.org/mcampbell508/package-skeleton)
-[![Total Downloads](http://img.shields.io/packagist/dm/mcampbell508/package-skeleton.svg)](https://packagist.org/packages/mcampbell508/package-skeleton)
-[![Latest Stable Version](http://img.shields.io/packagist/v/mcampbell508/package-skeleton.svg)](https://packagist.org/packages/mcampbell508/package-skeleton)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/mcampbell508/package-skeleton/blob/master/LICENSE)
+[![Build Status](http://img.shields.io/travis/mcampbell508/laravel-informant.svg)](https://travis-ci.org/mcampbell508/laravel-informant)
+[![Total Downloads](http://img.shields.io/packagist/dm/mcampbell508/laravel-informant.svg)](https://packagist.org/packages/mcampbell508/laravel-informant)
+[![Latest Stable Version](http://img.shields.io/packagist/v/mcampbell508/laravel-informant.svg)](https://packagist.org/packages/mcampbell508/laravel-informant)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/mcampbell508/laravel-informant/blob/master/LICENSE)
 
+As applications are always changing with every single pull/merge request that is merged into the main branch, if a team has
+several developers, there could be a chance that the local applications for other developers may not reflect the application
+state of the latest `master` version.
 
-:package_description
+This package is designed for teams using Laravel and other dependencies such as Node modules - and the aim is to inform
+developers about the state of their local application and whether they need to take actions that will help ensure the
+application state reflects the latest merged version of an application.
 
+![Example](./screenshots/errors.png)
+
+- [Why use this package?](#why-use-this)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Style](#code-style)
@@ -17,16 +25,30 @@ Package Skeleton
 - [Credits](#credits)
 - [License](#license)
 
+Why use this?
+------------
+
+Here's a list of what **could** change on every merge:
+
+- `composer.lock` has been modifed, a `composer install` will have to take place.
+- `composer.json` has been modified, a `composer dumpauto` might have to take place.
+- `package.json` OR `npm-skrinkwrap.json` OR  `yarn.lock` file has been modified, an appropriate command to make sure the frontend dependencies are available.
+- Files in `resources/assets` could have been modified, meaning a command like `gulp` might have to be run.
+- Database migrations could have been added.
+
+This could help with situations like "My tests pass on CI, but not locally - what can I do?". The first step will probably be making sure the application and all of its dependencies are in sync with the `master` application version.
+
+It is recommended to use this during **local development ONLY**.
 
 Installation
 ------------
 
-Add the package-skeleton package to your `composer.json` file.
+Add the laravel-informant package to your `composer.json` file.
 
 ``` json
 {
     "require": {
-        "mcampbell508/package-skeleton": "1.0.*"
+        "mcampbell508/laravel-informant": "1.0.*"
     }
 }
 ```
@@ -34,7 +56,7 @@ Add the package-skeleton package to your `composer.json` file.
 Or via the command line in the root of your Laravel installation.
 
 ``` bash
-$ composer require "mcampbell508/package-skeleton:1.0*"
+$ composer require "mcampbell508/laravel-informant:1.0*"
 ```
 
 Usage
@@ -72,14 +94,14 @@ $ php vendor/bin/phpunit
 Contributing
 ------------
 
-Please see [CONTRIBUTING](https://github.com/mcampbell508/package-skeleton/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/mcampbell508/laravel-informant/blob/master/CONTRIBUTING.md) for details.
 
 
 Credits
 -------
-- [All Contributors](https://github.com/mcampbell508/package-skeleton/contributors)
+- [All Contributors](https://github.com/mcampbell508/laravel-informant/contributors)
 
 License
 -------
 
-The MIT License (MIT). Please see [License File](https://github.com/mcampbell508/package-skeleton/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/mcampbell508/laravel-informant/blob/master/LICENSE) for more information.
