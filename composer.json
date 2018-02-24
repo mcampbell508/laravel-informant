@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MCampbell508\\Skeleton\\": ["src"]
+            "MattCampbell\\Laravel\\Informant": ["src"]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MCampbell508\\Tests\\": ["tests"]
+            "MattCampbell\\Tests\\": ["tests"]
         }
     }
 }
