@@ -96,11 +96,7 @@ Usage
 -----
 
 ``` php
-use MCampbell508\Skeleton;
-
-$skeleton = new Skeleton();
-echo $skeleton->echoPhrase('Hello, World!');
-
+php artisan informant:status
 ```
 
 Code Style
