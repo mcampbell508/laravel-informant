@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MattCampbell\\Laravel\\Informant": ["src"]
+            "MattCampbell\\Laravel\\Informant\\": ["src"]
         }
     },
     "autoload-dev": {
