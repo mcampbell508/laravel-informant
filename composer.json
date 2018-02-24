@@ -13,13 +13,17 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "symfony/process": "^3.4",
+        "symfony/console": "^3.4",
+        "symfony/finder": "^3.4",
+        "league/climate": "~3.2"
     },
     "require-dev": {
         "mockery/mockery": "dev-master@dev",
         "phpunit/phpunit": "^6.5",
         "friendsofphp/php-cs-fixer": "2.10",
-        "symplify/coding-standard": "^3.2"
+        "orchestra/testbench": "^3.5"
     },
     "autoload": {
         "psr-4": {
