@@ -3,7 +3,7 @@ Contributing
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/mcampbell508/package-skeleton).
+We accept contributions via Pull Requests on [Github](https://github.com/mcampbell508/laravel-informant).
 
 
 Pull Requests

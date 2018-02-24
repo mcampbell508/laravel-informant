@@ -1,8 +1,8 @@
 {
-    "name": "mcampbell508/package-skeleton",
-    "description": "A skeleton package to use as a base",
+    "name": "mcampbell508/laravel-informant",
+    "description": "Run checks against Laravel application dependencies to provide feedback during development.",
     "keywords": ["skeleton"],
-    "homepage": "https://github.com/mcampbell508/package-skeleton",
+    "homepage": "https://github.com/mcampbell508/laravel-informant",
     "license": "MIT",
     "authors": [
         {
