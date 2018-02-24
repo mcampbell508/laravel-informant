@@ -21,6 +21,7 @@ application state reflects the latest merged version of an application.
 - [Usage](#usage)
 - [Code Style](#code-style)
 - [Testing](#testing)
+- [Note about Git Hooks](#note-about-git-hooks)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
@@ -90,6 +91,14 @@ Testing
 ``` bash
 $ php vendor/bin/phpunit
 ```
+
+
+Note about Git Hooks
+--------------------
+
+There are also tools such as [Git Hooks](http://githooks.com/) which could be used to make sure these things are tackled at source like when doing things like a `git rebase` and it is recommended to use these tools but this is outside the scope of this package.
+
+- [Example Git Hook tool - Overcommit](https://github.com/brigade/overcommit)
 
 Contributing
 ------------
