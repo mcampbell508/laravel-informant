@@ -39,7 +39,8 @@ Here's a list of what **could** change on every merge:
 
 This could help with situations like "My tests pass on CI, but not locally - what can I do?". The first step will probably be making sure the application and all of its dependencies are in sync with the `master` application version.
 
-It is recommended to use this during **local development ONLY**.
+It is recommended to use this during **local development ONLY** and this package's service provider will have to be
+registered manually.
 
 Installation
 ------------
@@ -58,6 +59,37 @@ Or via the command line in the root of your Laravel installation.
 
 ``` bash
 $ composer require "mcampbell508/laravel-informant:1.0*"
+```
+
+## Register the service provider
+
+- If you would like to limit the environment
+    - Within the `register` method of `app/Providers/AppServiceProvider.php` or where prefered...
+
+```
+$informantEnvironments = config('informant.service_providers.limit_environments');
+
+if (empty($informantEnvironments) || in_array($this->app->environment(), $informantEnvironments)) {
+    $this->app->register(\MattCampbell\Laravel\InformantServiceProvider::class);
+}
+```
+
+> default values for `config('informant.service_providers.limit_environments')` are ['local', 'testing']
+
+- **Or** if you do not want to limit the environment:
+    - `config/app.php` service providers array...
+
+```
+\MattCampbell\Laravel\InformantServiceProvider::class,
+```
+
+
+## Publish vendor assets
+
+- Publish the config file:
+
+```
+php artisan vendor:publish --provider="MattCampbell\Laravel\InformantServiceProvider"
 ```
 
 Usage
